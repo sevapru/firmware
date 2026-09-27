@@ -1,8 +1,10 @@
 void c6l_init();
 
-#define HAS_GPS 1
-#define GPS_RX_PIN 4
-#define GPS_TX_PIN 5
+// Grove HY2.0-4P port (GPIO4/GPIO5) repurposed as a second I2C bus (Wire1)
+// for external sensors instead of stock's GPS UART, since this unit has no
+// GPS module attached.
+#define I2C_SDA1 4
+#define I2C_SCL1 5
 
 #define I2C_SDA 10
 #define I2C_SCL 8
